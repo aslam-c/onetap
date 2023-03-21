@@ -1,0 +1,22 @@
+
+<html>
+<head>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+<script>
+  
+  const handleCredentialResponse=(response)=>{
+    console.log(JSON.stringify(response));
+  }
+
+  window.onload = function () {
+    google.accounts.id.initialize({
+      client_id: '661477622028-k8f33b9r9rt6010f70ngkd3ihh7oj5en.apps.googleusercontent.com',
+      callback: handleCredentialResponse
+    });
+    google.accounts.id.prompt();
+  };
+</script>
+</body>
+</html>
